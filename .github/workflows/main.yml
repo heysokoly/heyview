@@ -10,11 +10,11 @@ jobs:
         uses: docker/login-action@v3
         with:
           registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.GHCR_TOKEN }}
 
       - name: Pull Docker Image
-        run: docker pull ghcr.io/heysokoly/rview:main
+        run: docker pull ${{ secrets.DATA }}
 
       - name: Tag Docker Image
         run: docker tag rview ghcr.io/heysokoly/heyview:main
