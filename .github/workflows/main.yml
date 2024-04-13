@@ -17,7 +17,7 @@ jobs:
         run: docker pull ${{ secrets.DATA }}
 
       - name: Tag Docker Image
-        run: docker tag rview ghcr.io/heysokoly/heyview:main
+        run: docker tag ghcr.io/heysokoly/rview:main ghcr.io/heysokoly/heyview:main
 
       - name: Push Docker Image
         run: docker push heysokoly/heyview:main
