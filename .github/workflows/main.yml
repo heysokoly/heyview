@@ -20,4 +20,4 @@ jobs:
         run: docker tag ghcr.io/heysokoly/rview:main ghcr.io/heysokoly/heyview:main
 
       - name: Push Docker Image
-        run: docker push heysokoly/heyview:main
+        run: docker push ghcr.io/heysokoly/heyview:main
